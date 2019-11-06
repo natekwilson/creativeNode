@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Vue REST</title>
+  <link rel="stylesheet" type="text/css" href="stylesheets/style.css"></script>
+
+</head>
+
+<body>
+  <div class="bg">
+    <div id="stuff">
+      <div id="app">
+        <h1>Select a City</h1>
+        <form v-on:keyup.prevent="fetchREST">
+          <input type="text" v-model="prefix">
+        </form>
+        <ul>
+          <li v-for="item in cities">
+            {{ item.name }}
+          </li>
+        </ul>
+      </div>
+    </div>
+    <footer>
+
+        <div class="container">
+            
+          <a href="https://github.com/BYUCS260/lab-4-node-natekwilson.git">Github Repository</a>
+            <h5>Created by Nathan Wilson</h5>
+
+        </div>
+    </footer>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
+  <script src="javascripts/script.js"></script>
+</body>
+
+</html>

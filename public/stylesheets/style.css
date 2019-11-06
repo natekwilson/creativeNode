@@ -1,0 +1,43 @@
+body {
+  
+  
+}
+
+body, html {
+  height: 100%;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("utah.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#stuff{
+  padding: 50px;
+  text-align: center;
+  color: #436d8f;
+  margin: auto;
+  width: 50%;
+  border: 5px solid #241212;
+
+  background: #c5c9c6;
+  font-family: "Times New Roman", Times, serif;
+}
+
+
+a {
+  color: #436d8f;
+  margin: auto;
+  width: 50%;
+  border: 5px solid #241212;
+  padding: 10px;
+  background: #c5c9c6;
+}
