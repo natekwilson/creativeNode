@@ -1,14 +1,28 @@
 var express = require('express');
 var router = express.Router();
 var request = require('request');
+const csv = require('csv-parser');
+const fs = require('fs');
 
-/* GET home page. */
+/* GET home page. 
+
+ npm i -s csv-parser
+ 
+ https://csv.js.org/parse/*/
 router.get('/', function(req, res, next) {
   res.sendFile('index.html', { root:  'public' });
 });
 router.get('/getcity',function(req,res,next) {
     console.log("In getcity route");
     var fs = require('fs');
+    fs.createReadStream('SynthesizersReworked.csv')
+      .pipe(csv())
+      .on('data', (row) => {
+        console.log(row);
+      })
+      .on('end', () => {
+        console.log('CSV file successfully processed');
+      });
     fs.readFile(__dirname + '/cities.dat.txt',function(err,data) 
     {
       if(err) throw err;
