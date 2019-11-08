@@ -5,19 +5,33 @@
   <meta charset="utf-8" />
   <title>Vue REST</title>
   <link rel="stylesheet" type="text/css" href="stylesheets/style.css"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+<script src="https://unpkg.com/vue@2.5.17/dist/vue.min.js"></script>
 </head>
 
 <body>
   <div class="bg">
     <div id="stuff">
       <div id="app">
-        <h1>Select a City</h1>
-        <form v-on:keyup.prevent="fetchREST">
-          <input type="text" v-model="prefix">
-        </form>
+        <h1>Synthesizer Explorer</h1>
+        <b-dropdown id="ddCommodity"
+                      name="ddCommodity"
+                      v-model="ddTestVm.ddTestSelectedOption"
+                      text="Synthesizer Manufacturers"
+                      variant="primary"
+                      class="m-md-2" v-on:change="changeItem">
+          <b-dropdown-item disabled value="0">Select an Item</b-dropdown-item>
+          <b-dropdown-item v-for="option in ddTestVm.options" 
+                        :key="option.value" 
+                        :value="option.value"
+                        @click="ddTestVm.ddTestSelectedOption = option.value">
+          {{option.text}}
+          </b-dropdown-item>           
+        </b-dropdown> 
+        <span>Selected: {{ ddTestVm.ddTestSelectedOption }}</span>
         <ul>
-          <li v-for="item in cities">
+          <li v-for="item in synths">
             {{ item.name }}
           </li>
         </ul>
@@ -27,7 +41,7 @@
 
         <div class="container">
             
-          <a href="https://github.com/BYUCS260/lab-4-node-natekwilson.git">Github Repository</a>
+          <a href="https://github.com/natekwilson/creativeNode.git">Github Repository</a>
             <h5>Created by Nathan Wilson</h5>
 
         </div>
@@ -36,6 +50,8 @@
   
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
   <script src="javascripts/script.js"></script>
+  <script src="https://unpkg.com/vue@2.5.17/dist/vue.min.js"></script>
+  
 </body>
 
 </html>
