@@ -1,12 +1,10 @@
-
-
 var app = new Vue({
   el: '#app',
   data: {
       someOtherProperty: null,
       ddTestVm: {
           originalValue: [],
-          ddTestSelectedOption: "Value1",
+          ddTestSelectedOption: "Click a Company",
           disabled: false,
           readonly: false,
           visible: true,
@@ -109,7 +107,7 @@ var app = new Vue({
       //grab some remote data
           try {
             console.log("In Fetch ");
-              let response = await this.$http.get('http://cs260.natewilsonit.com:3000/getsynth?q=' + this.ddTestVm.ddTestSelectedOption + '.json');
+              let response = await this.$http.get('http://cs260.natewilsonit.com:3000/getsynth?q=' + this.ddTestVm.ddTestSelectedOption);
               console.log(response.data);
               this.synths = response.data;
           } catch (error) {

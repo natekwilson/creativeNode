@@ -12,8 +12,8 @@ const fs = require('fs');
 router.get('/', function(req, res, next) {
   res.sendFile('index.html', { root:  'public' });
 });
-router.get('/getcity',function(req,res,next) {
-    console.log("In getcity route");
+router.get('/synth',function(req,res,next) {
+    console.log("In getsynth route");
     var fs = require('fs');
     fs.createReadStream('SynthesizersReworked.csv')
       .pipe(csv())
@@ -44,9 +44,5 @@ router.get('/getcity',function(req,res,next) {
     });
 });
 
-router.get('/owl', function(req, res) {
-  var owlurl = "https://owlbot.info/api/v1/dictionary/";
-  console.log("In Owl");
-  request(owlurl + req.query.q).pipe(res);
-});
+
 module.exports = router;

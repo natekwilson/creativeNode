@@ -3,6 +3,10 @@ body {
   
 }
 
+.container {
+  background-color: darkslategray;
+}
+
 body, html {
   height: 100%;
 }
