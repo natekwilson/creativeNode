@@ -1,36 +1,48 @@
-# Lab4-NodeREST
+# Lab 5: Museum of Ordinary Objects
 
-In this lab you will implement the Utah cities suggestions RESTful service in Node.js that connects to your weather cities application from ["Activity V3: Vue with REST Calls"](https://github.com/BYUCS260/Vue-REST). 
-You will take a URL with a ?q=chars suffix and will look up all of the utah cities that have those chars as a prefix. You will then return a JSON string corresponding to the entries.
+In this assignment, you will build an entire web application, using Vue for the
+front end and Node, Express, and Mongo on the back end.
 
-If you haven't seen the express generated files before, check out this [documentation](https://expressjs.com/en/starter/generator.html).
+## Starting the Lab
 
-The javascript application from ["Activity V3: Vue with REST Calls"](https://github.com/BYUCS260/Vue-REST) should be modified to make the request to your own REST server instead of the <a href="http://bioresearch.byu.edu/cs260/jquery/getcity.cgi?q=P">one used</a> for your javascript activity. 
-Before you do that, you should copy the related files over to your newly created express server. 
+To start the lab, you must follow this [GitHub Classroom link](https://classroom.github.com/a/a3PWXheX). This will create a private repository for you using our classroom site. We will only grade repositories created and submitted this way.
 
-These [hints](https://github.com/BYUCS260/Lab4-NodeREST/wiki/Cities-REST-Service-Hints) may be helpful if you get stuck.
+Once you "Accept the assignment" on GitHub Classroom, it will create a new repository for you and grant you access to it on GitHub. In order to start working on the lab, simply clone the repository to your laptop or other working environment.
 
-Once you have the getcity service working, 
-implement a proxy for the [Owlbot](https://owlbot.info/api/v1/dictionary/owl) api that will allow the user to search for a word and see the definition. 
-These [hints](https://github.com/mjcleme/node-api-server-tutorial#cors-issues) about how to reference another server may be useful.  You might also find this [description](https://expressjs.com/en/4x/api.html#req.query) of the "req" object that is passed to your route to be useful.
+## Tutorial
 
-When you're finished, you should run your node application with something like:
+Use the [tutorials](/tutorials/README.md) to create the application. This will help you create an application that includes creating items for the museum and displaying them. Once you are done, your home page should look like this:
 
-nohup node ./bin/www >& output &
+![home page](/screenshots/home-page.png)
 
-<strong>After you use nohup, make sure to exit by typing "exit" into the terminal (for PUTTY, there should be an equivalent if that doesn't work), otherwise the OS will kill the process in a short while.</strong>
+and your admin page should look like this:
 
-**You should test your server to make sure it works with your jquery front-end.**
+![admin page](/screenshots/admin-page.png)
 
-#### Grading:
+## Additional Functionality
 
-- The following rubric will be used for grading
+Once you complete these introductory tutorials, add the following functionality:
 
-Behavior |	Approximate Points
- --- | ---
-Your node.js server correctly serves static files (including your html file that accesses the REST service') | 10
-Your getcity service correctly returns the JSON containing the list of cities (all cities if no prefix given) | 20
-Your javascript front-end correctly uses your getcity service instead of the one from "Activity J6: REST Cities" | 20
-You implement a route that is a proxy for the Owlbot service that can be accessed by going to the owlRoute in the page object | 20
-Your Owlbot route has associated front-end code, allowing the user to search for a word and be shown the definition | 20
-Your code is correctly up to date on github, and your frontend page looks really good. This is subjective, so wow us. | 10
+- [Deleting Items](/tutorials/deleting-items.md)
+- [Editing Items](/tutorials/editing-items.md)
+- [Item Descriptions](/tutorials/item-descriptions.md)
+
+## Link to GitHub repository
+
+In a footer, you must include a link to your GitHub repository, which must be stored in GitHub Classroom.
+
+## Submission
+
+On Canvas, submit the URL for your website, which should be running on your DigitalOcean server.
+
+## Rubric for Grading
+
+When we grade these labs, we will award points using the following
+rubric:
+
+| Item                                                                                         | Points |
+| -------------------------------------------------------------------------------------------- | ------ |
+| The material in the tutorial works. Add four photos of your own objects to demonstrate this. | 70     |
+| Deleting items works                                                                         | 10     |
+| Editing items works                                                                          | 10     |
+| Item descriptions work for both adding and editing                                           | 10     |
