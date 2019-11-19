@@ -45,12 +45,12 @@ itemSchema.virtual('id').get(function()
   return this._id.toHexString();
 });
 
-// Create a model for items in the museum.
+// Create a model for items in the collection
 const Item = mongoose.model('Item', itemSchema);
 
 app.listen(4000, () => console.log('Server listening on port 4000!'));
 
-// Create a new item in the museum: takes a title and a path to an image.
+// Create a new item in the collection: takes a title and a path to an image.
 app.post('/api/items', async (req, res) => {
   const item = new Item({
     title: req.body.title,

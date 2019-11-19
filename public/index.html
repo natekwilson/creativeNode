@@ -3,7 +3,7 @@
 
 <head>
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="styles.css" />
   <title>Synthesizer Explorer</title>
 </head>
 <body>
@@ -12,8 +12,18 @@
   <div id="app" class="content">
     <section class="image-gallery">
       <div class="image" v-for="item in items">
-        <h2>{{item.title}}</h2>
-        <img :src="item.path" />
+        <div id="synth">
+            <h2>{{item.title}}</h2>
+            <h3>{{item.manufacturer}}</h3>
+            <h3>{{item.type}}</h3>
+            <h3>{{item.year}}</h3>
+            <h3>oscillators: {{item.oscillators}}</h3>
+            <h3>polyphony: {{item.polyphony}}</h3>
+            <h3>waveforms: {{item.waveforms}}</h3>
+            <h3>effects: {{item.effects}}</h3>
+            <h3>keyboard: {{item.keyboard}}</h3>
+            <img :src="item.path" />
+        </div>
       </div>
   </div>
   </div>

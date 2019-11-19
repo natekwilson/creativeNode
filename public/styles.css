@@ -1,7 +1,10 @@
 body {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
-  background: #fff;
+  background-image: url(synth.jpg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-color: black;
   padding: 0px;
   margin: 0px;
 }
@@ -43,6 +46,23 @@ body {
 
 .image h2 {
   font-style: italic;
+  font-size: 1em;
+}
+
+#synth {
+  font-style: bold;
+  font-size: 1em;
+  background-color: whitesmoke;
+}
+
+#app {
+  max-width: 500px;
+  margin: auto;
+  background-color: grey;
+}
+
+.content h3 {
+  font-style: bold;
   font-size: 1em;
 }
 
