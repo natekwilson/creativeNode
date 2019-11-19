@@ -50,19 +50,28 @@ body {
 }
 
 #synth {
-  font-style: bold;
-  font-size: 1em;
   background-color: whitesmoke;
+  padding: 25px;
+  border: 1px solid #111111;
 }
 
 #app {
-  max-width: 500px;
+  max-width: 900px;
   margin: auto;
   background-color: grey;
 }
 
+.c {
+	text-align: center;
+	font-size: 40px;
+}
+
+.r {
+	text-align: right;
+	font-size: 15px;
+}
+
 .content h3 {
-  font-style: bold;
   font-size: 1em;
 }
 
@@ -154,20 +163,20 @@ html {
 /* Masonry on large screens */
 @media only screen and (min-width: 1024px) {
   .image-gallery {
-    column-count: 4;
+    column-count: 1;
   }
 }
 
 /* Masonry on medium-sized screens */
 @media only screen and (max-width: 1023px) and (min-width: 768px) {
   .image-gallery {
-    column-count: 3;
+    column-count: 1;
   }
 }
 
 /* Masonry on small screens */
 @media only screen and (max-width: 767px) and (min-width: 540px) {
   .image-gallery {
-    column-count: 2;
+    column-count: 1;
   }
 }

@@ -8,31 +8,32 @@
 </head>
 <body>
   <div class="bg">
-  <h1>Nate's Synthesizer Collection</h1>
   <div id="app" class="content">
     <section class="image-gallery">
+     <h1>Nate's Sythesizer Collection</h1>
       <div class="image" v-for="item in items">
         <div id="synth">
-            <h2>{{item.title}}</h2>
-            <h3>{{item.manufacturer}}</h3>
-            <h3>{{item.type}}</h3>
-            <h3>{{item.year}}</h3>
-            <h3>oscillators: {{item.oscillators}}</h3>
-            <h3>polyphony: {{item.polyphony}}</h3>
-            <h3>waveforms: {{item.waveforms}}</h3>
-            <h3>effects: {{item.effects}}</h3>
-            <h3>keyboard: {{item.keyboard}}</h3>
+            <h1 class="c">{{item.title}}</h1>
+            <h2 class="r">{{item.manufacturer}} : {{item.type}}</h2>
+            <h2 class="r">{{item.year}}</h2>
+            <h3>oscillators:  {{item.oscillators}}</h3>
+            <h3>polyphony:  {{item.polyphony}}</h3>
+            <h3>waveforms:  {{item.waveforms}}</h3>
+            <h3>effects:  {{item.effects}}</h3>
+            <h3>keyboard:  {{item.keyboard}}</h3>
             <img :src="item.path" />
         </div>
       </div>
-  </div>
-  </div>
-  <div class="footer">
+
+    <div class="footer">
     <div class="container">
         <a href="https://github.com/natekwilson/creativeNode.git">Github Repository</a>
         <h5>Created by Nathan Wilson</h5>
     </div>	
   </div>
+  </div>
+  </div>
+ 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.7/vue.js" integrity="sha256-g+Q8DFAmG5+eyRPSydX0LY4TfjsL11XSDrIGerbbEdA=" crossorigin="anonymous"></script>
   <script src="/script.js"></script>
